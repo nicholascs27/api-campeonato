@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  punctuation: 1
+  victories: 1
+  defeats: 1
+  ties: 1
+  home_victories: 1
+  away_victories: 1
+  bonus: 1
+  punishment: 1
+  championship_id: 1
+
+two:
+  name: MyString
+  punctuation: 1
+  victories: 1
+  defeats: 1
+  ties: 1
+  home_victories: 1
+  away_victories: 1
+  bonus: 1
+  punishment: 1
+  championship_id: 1
