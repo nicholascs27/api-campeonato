@@ -4,7 +4,9 @@ class Match < ApplicationRecord
   belongs_to :away_player, class_name: "Player"
   belongs_to :championship
   
-  has_many :results
+  has_many :results, dependent: :destroy
+
+  validates :home_player_id, :away_player, :championship_id, presence: true
 
   before_create :set_zero
 

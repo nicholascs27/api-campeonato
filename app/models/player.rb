@@ -2,7 +2,9 @@ class Player < ApplicationRecord
 
   belongs_to :championship
   
-  has_many :matchs
+  has_many :matchs, dependent: :destroy
+
+  validates :championship_id, presence: true
 
   before_create :set_zero
 

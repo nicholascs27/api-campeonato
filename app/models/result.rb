@@ -2,6 +2,8 @@ class Result < ApplicationRecord
 
   belongs_to :match
 
+  validates :match_id, presence: true
+
   before_save :resultado_jogada_casa_maior_que_dez
   before_save :resultado_jogada_fora_maior_que_dez
 
