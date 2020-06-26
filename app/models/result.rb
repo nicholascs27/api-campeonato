@@ -2,10 +2,10 @@ class Result < ApplicationRecord
 
   belongs_to :match
 
-  before_save :result_home_score_bigger_then_ten
-  before_save :result_away_score_bigger_then_ten
+  before_save :resultado_jogada_casa_maior_que_dez
+  before_save :resultado_jogada_fora_maior_que_dez
 
-  def result_home_score_bigger_then_ten
+  def resultado_jogada_casa_maior_que_dez
     if self.home_score > 10
       self.home_score += 2
       self.match.home_player.bonus += 1
@@ -13,7 +13,7 @@ class Result < ApplicationRecord
     end
   end
 
-  def result_away_score_bigger_then_ten
+  def resultado_jogada_fora_maior_que_dez
     if self.away_score > 10
       self.match.away_player.bonus += 1
       self.match.away_player.save(validate: false)
